@@ -122,7 +122,63 @@
     
 
 
-    <!-- Section Autorité Pourquoi Choisir ODM -->
+    
+    <!-- Section Simulateur de Devis Interactif ODM -->
+    <div style="background-color: #111827; padding: 45px 20px; text-align: center; border-bottom: 1px solid #2d3748;">
+        <h2 style="color: #fff; font-size: 1.8em; margin-bottom: 10px;">Estimez votre Projet Sur-Mesure</h2>
+        <p style="color: #a0aec0; max-width: 550px; margin: 0 auto 30px auto; font-size: 0.95em;">Sélectionnez les services dont votre entreprise a besoin pour générer votre accès WhatsApp direct.</p>
+        
+        <div style="background-color: #1a202c; border: 1px solid #374151; padding: 30px; border-radius: 12px; max-width: 500px; margin: 0 auto; text-align: left; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);">
+            <div style="margin-bottom: 15px;">
+                <label style="color: #fff; font-weight: bold; display: block; margin-bottom: 10px;">Options du projet :</label>
+                
+                <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="opt_web" value="Création de Site Web" checked style="width: 18px; height: 18px; accent-color: #38a169;">
+                    <span style="color: #cbd5e0; font-size: 0.95em;">Création de Site Web</span>
+                </div>
+                
+                <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="opt_sec" value="Haute Sécurisation" checked style="width: 18px; height: 18px; accent-color: #38a169;">
+                    <span style="color: #cbd5e0; font-size: 0.95em;">Sécurisation Continue & Antivirus</span>
+                </div>
+                
+                <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="opt_cont" value="Création de Contenu" style="width: 18px; height: 18px; accent-color: #38a169;">
+                    <span style="color: #cbd5e0; font-size: 0.95em;">Création de Contenu Publicitaire (Photos/Carrousels)</span>
+                </div>
+                
+                <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="opt_res" value="Gestion de Réseaux Sociaux" style="width: 18px; height: 18px; accent-color: #38a169;">
+                    <span style="color: #cbd5e0; font-size: 0.95em;">Gestion Complète des Pages Réseaux Sociaux</span>
+                </div>
+            </div>
+
+            <button onclick="envoyerDevisODM()" style="width: 100%; background-color: #38a169; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: bold; font-size: 1em; cursor: pointer; box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3); transition: background-color 0.2s;">
+                🚀 Envoyer ma demande sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+    function envoyerDevisODM() {
+        let services = [];
+        if(document.getElementById('opt_web').checked) services.push("Création de Site Web");
+        if(document.getElementById('opt_sec').checked) services.push("Haute Sécurisation");
+        if(document.getElementById('opt_cont').checked) services.push("Création de Contenu");
+        if(document.getElementById('opt_res').checked) services.push("Gestion de Réseaux Sociaux");
+        
+        if(services.length === 0) {
+            alert("Veuillez sélectionner au moins une option pour votre projet.");
+            return;
+        }
+        
+        let message = "Bonjour Amadou Tech, je souhaite lancer un projet avec les options suivantes :\n\n" + services.map(s => "• " + s).join("\n");
+        let link = "https://wa.me" + encodeURIComponent(message);
+        window.open(link, '_blank');
+    }
+    </script>
+
+<!-- Section Autorité Pourquoi Choisir ODM -->
     <div style="background-color: #1a202c; padding: 50px 20px; text-align: center; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748;">
         <h2 style="color: #fff; font-size: 1.8em; margin-bottom: 10px;">Pourquoi faire confiance à ODM — Amadou Tech ?</h2>
         <p style="color: #a0aec0; max-width: 600px; margin: 0 auto 35px auto; font-size: 0.95em;">Une expertise reconnue sur les réseaux sociaux combinée à une maîtrise technique de pointe pour propulser votre entreprise à l'international.</p>
