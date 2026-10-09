@@ -38,6 +38,17 @@
         }
     </style>
 
+
+<script>
+// Protection ODM : Bloquer le clic droit et la copie du site
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('keydown', event => {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'c' || event.key === 'i')) {
+        event.preventDefault();
+    }
+});
+</script>
+
 </head>
 <body style="background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0;">
 
