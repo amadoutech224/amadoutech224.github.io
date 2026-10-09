@@ -161,7 +161,63 @@
     <!-- Section A Propos de Moi - Amadou DIALLO -->
     <div style="background-color: #111827; padding: 60px 20px; border-bottom: 1px solid #2d3748;">
         <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-            <h2 style="color: #fff; font-size: 2em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #38a169; display: inline-block; padding-bottom: 5px;">À Propos d'Amadou DIALLO</h2>
+            <h2 style="color: #fff; font-size: 2em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #38a169; display: inline-block; padding-bottom: 5px;">À Propos d'Amadou DIALLO
+
+    <!-- Système Connexion Espace Client ODM -->
+    <div style="background-color: #1e293b; border: 1px solid #475569; padding: 15px; border-radius: 8px; max-width: 800px; margin: 20px auto; text-align: right; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);">
+        <span style="color: #94a3b8; font-size: 0.9em; font-weight: bold;">💎 PORTAIL PARTENAIRES HAUT DE GAMME</span>
+        <button onclick="ouvrirConnexionODM()" style="background-color: #3182ce; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);">
+            <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 448 512"><path d="M144 144v48H96v-48c0-26.5 21.5-48 48-48h160c26.5 0 48 21.5 48 48v48h-48v-48H144zm240 48v-48c0-53-43-96-96-96H144c-53 0-96 43-96 96v48H16c-8.8 0-16 7.2-16 16v288c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V208c0-8.8-7.2-16-16-16H384z"/></svg>
+            Connexion Espace Client
+        </button>
+    </div>
+
+    <!-- Fenêtre Pop-up de Connexion Majeure -->
+    <div id="modal_connexion" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.85); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div style="background-color: #0f172a; border: 2px solid #3182ce; padding: 35px; border-radius: 16px; width: 90%; max-width: 400px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+            <h3 style="color: white; margin-top: 0; font-size: 1.5em; text-align: center; margin-bottom: 5px;">Interface ODM Partner</h3>
+            <p style="color: #64748b; font-size: 0.85em; text-align: center; margin-bottom: 25px;">Accès sécurisé réservé aux entreprises sous contrat annuel</p>
+            
+            <div style="margin-bottom: 15px;">
+                <label style="color: #94a3b8; display: block; margin-bottom: 5px; font-size: 0.9em;">Identifiant Client / Email :</label>
+                <input type="text" id="client_user" placeholder="ex: entreprise@direction.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background-color: #1e293b; color: white; box-sizing: border-box;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="color: #94a3b8; display: block; margin-bottom: 5px; font-size: 0.9em;">Clé de Sécurité (Token) :</label>
+                <input type="password" id="client_pass" placeholder="••••••••" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background-color: #1e293b; color: white; box-sizing: border-box;">
+            </div>
+            
+            <button onclick="validerAccesODM()" style="width: 100%; background-color: #3182ce; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1em; margin-bottom: 12px;">
+                Vérifier les identifiants
+            </button>
+            
+            <button onclick="fermerConnexionODM()" style="width: 100%; background-color: transparent; color: #64748b; border: 1px solid #334155; padding: 10px; border-radius: 8px; font-size: 0.9em; cursor: pointer;">
+                Annuler
+            </button>
+        </div>
+    </div>
+
+    <script>
+    function ouvrirConnexionODM() {
+        document.getElementById('modal_connexion').style.display = 'flex';
+    }
+    function fermerConnexionODM() {
+        document.getElementById('modal_connexion').style.display = 'none';
+    }
+    function validerAccesODM() {
+        let user = document.getElementById('client_user').value;
+        let pass = document.getElementById('client_pass').value;
+        if(user === "" || pass === "") {
+            alert("🔒 Sécurité ODM : Veuillez remplir vos accès professionnels.");
+            return;
+        }
+        // Simulation de connexion haut de gamme pour l'entrepreneur
+        alert("Verification en cours... Aucun contrat actif lie a cet identifiant. Contactez Amadou DIALLO sur WhatsApp pour activer votre token de connexion.");
+        window.open("https://wa.me.", '_blank');
+    }
+    </script>
+</h2>
             
             <p style="color: #e2e8f0; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;">
                 Créateur de contenu guinéen influent et expert en mobilisation numérique, je suis spécialisé dans l'animation de débats d'idées et la sensibilisation citoyenne. Grâce à une maîtrise stratégique des plateformes mobiles et des tendances algorithmiques, j'ai propulsé mon média <strong>ODM DÉBAT FR</strong> parmi les espaces de discussion les plus performants d'Afrique de l'Ouest avec plus de <strong>22 millions de vues globales cumulées</strong>.
