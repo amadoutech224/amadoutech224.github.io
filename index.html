@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amadou Tech - Expert Systeme.io</title>
+    <title>Amadou Tech - Expert Certifié Systeme.io</title>
     <style>
         :root {
             --bg-dark: #0f1123;
@@ -137,27 +137,73 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 40px;
         }
-        .content-section {
+        
+        /* Grille des tarifs d'origine */
+        .pricing-section {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .pricing-title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+        }
+        .pricing-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .price-card {
             background-color: var(--card-dark);
             border-radius: 12px;
             padding: 25px;
             border: 1px solid #23264d;
-            margin-bottom: 30px;
+            text-align: center;
         }
-        .content-title {
-            font-size: 1.3rem;
+        .price-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .price-amount {
+            font-size: 2rem;
+            font-weight: bold;
             color: var(--accent-cyan);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
-        .content-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        
+        /* Zone du convertisseur d'origine */
+        .converter-box {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #23264d;
+            max-width: 400px;
+            margin: 40px auto 0 auto;
+        }
+        .converter-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+        .converter-box select {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            border: 1px solid #334155;
+            padding: 10px 15px;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="top-bar">0 0</div>
+    <div class="top-bar">585 $ / 550 € / 5 000 000 GNF</div>
     <div class="container">
+        
         <nav class="navbar">
             <div class="logo">AMADOU<br>TECH</div>
             <div class="nav-links">
@@ -167,6 +213,7 @@
                 <div>Certification</div>
             </div>
         </nav>
+
         <div class="certif-container">
             <div class="certif-circle">
                 <div class="s-logo">s</div>
@@ -182,12 +229,48 @@
             </div>
             <div class="badge-text">🏆 EXPERT CERTIFIÉ SYSTEME.IO</div>
         </div>
+
         <h2 class="hero-title">Propulsez Votre Visibilité & Automatisez Vos Ventes Sur Internet</h2>
-        <div class="content-section">
-            <h3 class="content-title">Propulsez Votre Entreprise</h3>
-            <p class="content-text">Spécialisé dans l'écosystème Systeme.io, je conçois des automatisations intelligentes et des tunnels de vente optimisés. Mon objectif est d'éliminer vos tâches répétitives tout en décuplant vos résultats et votre visibilité sur le web.</p>
+
+        <!-- Grille des Tarifs d'origine réintégrée -->
+        <section class="pricing-section">
+            <h3 class="pricing-title">Nos Offres & Tarifs</h3>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-name">Pack Visibilité Standard</div>
+                    <div class="price-amount" id="price-standard">5 000 000 GNF</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Mise en place de votre premier tunnel de vente optimisé sous Systeme.io.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sélecteur de tarifs d'origine réintégré -->
+        <div class="converter-box">
+            <label>Convertir les tarifs en :</label>
+            <select id="currency-select" onchange="convertPrice()">
+                <option value="GNF">GNF (Franc Guinéen)</option>
+                <option value="USD">USD (Dollar - 585 $)</option>
+                <option value="EUR">EUR (Euro - 550 €)</option>
+            </select>
         </div>
+
     </div>
+
+    <!-- Script de conversion automatique -->
+    <script>
+        function convertPrice() {
+            var select = document.getElementById("currency-select");
+            var priceLabel = document.getElementById("price-standard");
+            if (select.value === "GNF") {
+                priceLabel.innerText = "5 000 000 GNF";
+            } else if (select.value === "USD") {
+                priceLabel.innerText = "585 $";
+            } else if (select.value === "EUR") {
+                priceLabel.innerText = "550 €";
+            }
+        }
+    </script>
 </body>
 </html>
+
 0
