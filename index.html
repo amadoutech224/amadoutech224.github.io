@@ -6,12 +6,12 @@
     <title>Amadou Tech - Expert Systeme.io</title>
     <style>
         :root {
-            --bg-dark: #0b0f19;
-            --card-dark: #131c2e;
-            --accent-blue: #2563eb;
-            --accent-cyan: #06b6d4;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-dark: #0f1123;
+            --card-dark: #171932;
+            --accent-blue: #0088ff;
+            --accent-cyan: #00ccff;
+            --text-main: #ffffff;
+            --text-muted: #8fa0dd;
         }
         * {
             margin: 0;
@@ -22,367 +22,172 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.4;
+            padding: 15px;
+        }
+        .top-bar {
+            background-color: #4b46ef;
+            color: #ffffff;
+            font-size: 0.8rem;
+            padding: 5px;
+            text-align: left;
+            margin: -15px -15px 15px -15px;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
         }
-        
-        /* Menu d'origine */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #1e293b;
-            margin-bottom: 40px;
+            padding: 15px 0;
+            margin-bottom: 30px;
         }
         .logo {
             font-weight: bold;
-            font-size: 1.5rem;
-            color: var(--accent-cyan);
-            line-height: 1.2;
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            line-height: 1.1;
         }
         .nav-links {
-            display: flex;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 15px;
             font-size: 0.9rem;
             color: var(--text-muted);
+            text-align: left;
         }
-
-        /* En-tête */
-        header {
+        .certif-container {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
         }
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Section Réalisations moderne */
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .section-desc {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-        .realisations-list {
+        .certif-circle {
+            width: 220px;
+            height: 220px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 25px auto;
+            border: 4px solid var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
             display: flex;
             flex-direction: column;
-            gap: 30px;
-            margin-bottom: 40px;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            color: #000000;
         }
-        .project-box {
-            background-color: var(--card-dark);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #1e293b;
+        .s-logo {
+            color: #00aaff;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 2px;
         }
-        .project-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
+        .certif-title {
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2px;
         }
-        .project-content {
-            padding: 25px;
+        .certif-feli {
+            font-size: 0.5rem;
+            color: #666;
+            margin-bottom: 5px;
         }
-        .project-title {
-            font-size: 1.4rem;
-            color: var(--accent-cyan);
-            margin-bottom: 15px;
+        .certif-name {
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+            width: 80%;
         }
-        .project-features {
-            margin-top: 10px;
-            padding-left: 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .project-features li {
+        .certif-desc {
+            font-size: 0.45rem;
+            color: #333;
             margin-bottom: 8px;
         }
-        .project-features strong {
-            color: var(--text-main);
-        }
-
-        /* Convertisseur de tarifs d'origine */
-        .converter-box {
-            background-color: var(--card-dark);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #1e293b;
-            max-width: 400px;
-            margin: 40px auto 0 auto;
-        }
-        .converter-box label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: var(--text-main);
-        }
-        .converter-box select {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            border: 1px solid #334155;
-            padding: 10px 15px;
-            border-radius: 6px;
-            width: 100%;
-            font-size: 1rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Navbar d'origine -->
-        <nav class="navbar">
-            <div class="logo">AMADOU<br>TECH</div>
-            <div class="nav-links">
-                <span>Accueil</span>
-                <span>Tarifs</span>
-                <span>Certification</span>
-            </div>
-        </nav>
-
-        <header>
-            <p class="subtitle">Expert Certifié Systeme.io / Automatisation & Visibilité</p>
-        </header>
-
-        <section>
-            <h2 class="section-title">Nos Réalisations Clés</h2>
-            <p class="section-desc">Découvrez nos derniers systèmes d'élite déployés à l'international.</p>
-
-            <div class="realisations-list">
-                
-                <!-- Projet 1 : Avec l'image du couple d'affaires et description moderne -->
-                <div class="project-box">
-                    <img src="https://unsplash.com" alt="Fintech Corporate Team" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">Fintech Security & E-Commerce Platform</h3>
-                        <ul class="project-features">
-                            <li><strong>Conception d'Élite :</strong> Création de structures digitales avancées et sécurisées pour la gestion des transactions financières mondiales.</li>
-                            <li><strong>Tunnels Optimisés :</strong> Déploiement d'architectures de conversion sous Systeme.io pour maximiser la capture de clients.</li>
-                            <li><strong>Haute Sécurité :</strong> Audits de pénétration rigoureux et protocoles de protection avancés pour sécuriser les espaces bancaires et membres.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Projet 2 : Deuxième réalisation moderne structurée -->
-                <div class="project-box">
-                    <div class="project-content">
-                        <h3 class="project-title">Custom AI Agent & Automation Integration</h3>
-                        <ul class="project-features">
-                            <li><strong>Automatisation Globale :</strong> Interconnexion complète de vos bases de données pour supprimer les tâches répétitives.</li>
-                            <li><strong>Agents IA Avancés :</strong> Intégration de chatbots intelligents formés sur-mesure pour votre support client 24h/24.</li>
-                            <li><strong>Visibilité Accrue :</strong> Suivi précis des indicateurs clés (Analytics) pour optimiser vos revenus en temps réel.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Sélecteur de tarifs d'origine -->
-        <div class="converter-box">
-            <label>Convertir les tarifs en :</label>
-            <select>
-                <option>GNF (Franc Guinéen)</option>
-                <option>EUR (Euro)</option>
-                <option>USD (Dollar)</option>
-            </select>
-        </div>
-    </div>
-</body>
-</html>
-
-0<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amadou Tech - Expert Systeme.io</title>
-    <style>
-        :root {
-            --bg-dark: #0b0f19;
-            --card-dark: #131c2e;
-            --accent-blue: #2563eb;
-            --accent-cyan: #06b6d4;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Menu d'origine */
-        .navbar {
+        .certif-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #1e293b;
-            margin-bottom: 40px;
+            width: 90%;
+            font-size: 0.35rem;
         }
-        .logo {
+        .badge-text {
+            background: linear-gradient(to right, #e28743, #eeaf61);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: bold;
-            font-size: 1.5rem;
-            color: var(--accent-cyan);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .hero-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 20px;
             line-height: 1.2;
-        }
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* En-tête */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: var(--text-main);
-        }
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Section Réalisations sans photos */
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .section-desc {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-        .realisations-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            background: linear-gradient(to bottom, #ffffff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 40px;
         }
-        .project-box {
+        .content-section {
             background-color: var(--card-dark);
             border-radius: 12px;
             padding: 25px;
-            border: 1px solid #1e293b;
+            border: 1px solid #23264d;
+            margin-bottom: 30px;
         }
-        .project-title {
+        .content-title {
             font-size: 1.3rem;
             color: var(--accent-cyan);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-        .project-text {
+        .content-text {
             color: var(--text-muted);
             font-size: 0.95rem;
-        }
-
-        /* Convertisseur de tarifs d'origine */
-        .converter-box {
-            background-color: var(--card-dark);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #1e293b;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .converter-box label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: var(--text-main);
-        }
-        .converter-box select {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            border: 1px solid #334155;
-            padding: 10px 15px;
-            border-radius: 6px;
-            width: 100%;
-            font-size: 1rem;
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">0 0</div>
     <div class="container">
-        <!-- Navbar d'origine -->
         <nav class="navbar">
             <div class="logo">AMADOU<br>TECH</div>
             <div class="nav-links">
-                <span>Accueil</span>
-                <span>Tarifs</span>
-                <span>Certification</span>
+                <div>Accueil</div>
+                <div>Tarifs</div>
+                <div>Expertise</div>
+                <div>Certification</div>
             </div>
         </nav>
-
-        <header>
-            <p class="subtitle">Expert Certifié Systeme.io / Automatisation & Visibilité</p>
-        </header>
-
-        <section>
-            <h2 class="section-title">Nos Réalisations Clés</h2>
-            <p class="section-desc">Découvrez nos derniers systèmes d'élite déployés à l'international.</p>
-
-            <div class="realisations-list">
-                <!-- Projet 1 -->
-                <div class="project-box">
-                    <h3 class="project-title">E-Commerce Corporate Platform</h3>
-                    <p class="project-text">Création et optimisation de structures de boutiques en ligne modernes et de tunnels de vente fluides pour booster vos ventes de produits physiques ou digitaux.</p>
-                </div>
-
-                <!-- Projet 2 -->
-                <div class="project-box">
-                    <h3 class="project-title">Fintech Security Audit</h3>
-                    <p class="project-text">Tests de pénétration avancés, intégration de systèmes de paiement automatisés sécurisés et sécurisation complète de vos serveurs bancaires.</p>
-                </div>
-
-                <!-- Projet 3 -->
-                <div class="project-box">
-                    <h3 class="project-title">Custom AI Agent Chatbot</h3>
-                    <p class="project-text">Déploiement d'agents conversationnels intelligents et d'assistants virtuels pour automatiser votre support client et capturer des leads qualifiés 24h/24.</p>
+        <div class="certif-container">
+            <div class="certif-circle">
+                <div class="s-logo">s</div>
+                <div class="certif-title">Certificat de réussite</div>
+                <div class="certif-feli">Félicitations à :</div>
+                <div class="certif-name">Amadou diallo</div>
+                <div class="certif-desc">Pour avoir terminé la certification systeme.io</div>
+                <div class="certif-footer">
+                    <div>Aurélien Amacker<br><span style="color:#888;">Fondateur</span></div>
+                    <div style="color:#ffcc00; font-size:1rem;">🏆</div>
+                    <div style="color:#00aaff; font-weight:bold;">systeme.io</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Sélecteur de tarifs d'origine -->
-        <div class="converter-box">
-            <label>Convertir les tarifs en :</label>
-            <select>
-                <option>GNF (Franc Guinéen)</option>
-                <option>EUR (Euro)</option>
-                <option>USD (Dollar)</option>
-            </select>
+            <div class="badge-text">🏆 EXPERT CERTIFIÉ SYSTEME.IO</div>
+        </div>
+        <h2 class="hero-title">Propulsez Votre Visibilité & Automatisez Vos Ventes Sur Internet</h2>
+        <div class="content-section">
+            <h3 class="content-title">Propulsez Votre Entreprise</h3>
+            <p class="content-text">Spécialisé dans l'écosystème Systeme.io, je conçois des automatisations intelligentes et des tunnels de vente optimisés. Mon objectif est d'éliminer vos tâches répétitives tout en décuplant vos résultats et votre visibilité sur le web.</p>
         </div>
     </div>
 </body>
 </html>
-
 0
