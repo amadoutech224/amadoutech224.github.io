@@ -57,6 +57,210 @@
             text-align: center;
             margin-bottom: 50px;
         }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Section Réalisations moderne */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .realisations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .project-box {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+        }
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .project-content {
+            padding: 25px;
+        }
+        .project-title {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 15px;
+        }
+        .project-features {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .project-features li {
+            margin-bottom: 8px;
+        }
+        .project-features strong {
+            color: var(--text-main);
+        }
+
+        /* Convertisseur de tarifs d'origine */
+        .converter-box {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #1e293b;
+            max-width: 400px;
+            margin: 40px auto 0 auto;
+        }
+        .converter-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+        .converter-box select {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            border: 1px solid #334155;
+            padding: 10px 15px;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar d'origine -->
+        <nav class="navbar">
+            <div class="logo">AMADOU<br>TECH</div>
+            <div class="nav-links">
+                <span>Accueil</span>
+                <span>Tarifs</span>
+                <span>Certification</span>
+            </div>
+        </nav>
+
+        <header>
+            <p class="subtitle">Expert Certifié Systeme.io / Automatisation & Visibilité</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Nos Réalisations Clés</h2>
+            <p class="section-desc">Découvrez nos derniers systèmes d'élite déployés à l'international.</p>
+
+            <div class="realisations-list">
+                
+                <!-- Projet 1 : Avec l'image du couple d'affaires et description moderne -->
+                <div class="project-box">
+                    <img src="https://unsplash.com" alt="Fintech Corporate Team" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Fintech Security & E-Commerce Platform</h3>
+                        <ul class="project-features">
+                            <li><strong>Conception d'Élite :</strong> Création de structures digitales avancées et sécurisées pour la gestion des transactions financières mondiales.</li>
+                            <li><strong>Tunnels Optimisés :</strong> Déploiement d'architectures de conversion sous Systeme.io pour maximiser la capture de clients.</li>
+                            <li><strong>Haute Sécurité :</strong> Audits de pénétration rigoureux et protocoles de protection avancés pour sécuriser les espaces bancaires et membres.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projet 2 : Deuxième réalisation moderne structurée -->
+                <div class="project-box">
+                    <div class="project-content">
+                        <h3 class="project-title">Custom AI Agent & Automation Integration</h3>
+                        <ul class="project-features">
+                            <li><strong>Automatisation Globale :</strong> Interconnexion complète de vos bases de données pour supprimer les tâches répétitives.</li>
+                            <li><strong>Agents IA Avancés :</strong> Intégration de chatbots intelligents formés sur-mesure pour votre support client 24h/24.</li>
+                            <li><strong>Visibilité Accrue :</strong> Suivi précis des indicateurs clés (Analytics) pour optimiser vos revenus en temps réel.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sélecteur de tarifs d'origine -->
+        <div class="converter-box">
+            <label>Convertir les tarifs en :</label>
+            <select>
+                <option>GNF (Franc Guinéen)</option>
+                <option>EUR (Euro)</option>
+                <option>USD (Dollar)</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
+
+0<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amadou Tech - Expert Systeme.io</title>
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --card-dark: #131c2e;
+            --accent-blue: #2563eb;
+            --accent-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Menu d'origine */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1e293b;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            line-height: 1.2;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* En-tête */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
         h1 {
             font-size: 2.2rem;
             margin-bottom: 15px;
