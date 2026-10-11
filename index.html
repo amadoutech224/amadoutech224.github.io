@@ -1,545 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amadou Tech - Expert Systeme.io</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-dark: #1e293b;
+            --accent-blue: #2563eb;
+            --accent-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .profile-section {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-cyan);
+        }
+        .profile-text h2 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+        .profile-text p {
+            color: var(--text-muted);
+            max-width: 600px;
+            font-size: 1rem;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 2rem;
+            color: var(--text-main);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        @media (min-width: 768px) {
+            .profile-section {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AMADOU TECH</h1>
+            <p class="subtitle">Automatisation & Visibilité sur Internet</p>
+        </header>
+
+        <!-- Section PDG avec votre photo sur le canapé -->
+        <section class="profile-section">
+            <img src="https://unsplash.com" alt="Amadou - PDG" class="profile-img">
+            <div class="profile-text">
+                <h2>Qui suis-je ?</h2>
+                <p>Bienvenue ! Je suis le <strong>PDG et fondateur d'Amadou Tech</strong>. Expert certifié Systeme.io, j'accompagne les entreprises dans l'automatisation de leur business, la création de tunnels de vente à forte conversion et le déploiement de stratégies digitales sur-mesure.</p>
+            </div>
+        </section>
+
+        <h2 class="section-title">Nos Réalisations</h2>
+
+        <main class="grid">
+            <!-- Projet 1 : Boutique -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="E-Commerce Platform" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">E-Commerce Corporate Platform</h2>
+                    <p class="card-text">Création et optimisation de structures de boutiques en ligne modernes et de tunnels de vente fluides pour booster vos ventes de produits.</p>
+                </div>
+            </div>
+
+            <!-- Projet 2 : Téléphone et graphiques -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="Fintech Dashboard" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Fintech & Analytics Audit</h2>
+                    <p class="card-text">Intégration de tableaux de bord financiers, de systèmes de paiement automatisés sécurisés et d'outils d'analyse précis.</p>
+                </div>
+            </div>
+
+            <!-- Projet 3 : Homme bras croisés -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="AI Agent Support" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Custom AI Agent Chatbot</h2>
+                    <p class="card-text">Déploiement d'agents conversationnels intelligents et d'assistants virtuels pour automatiser votre support client 24h/24.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
 0<!DOCTYPE html>
 <html lang="fr">
 <head>
-
-    <!-- SEO International & Langues -->
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="Amadou Tech, Web Development, Cybersecurity, AI Chatbot, Audit, High-End Digital Solutions, Amadou Diallo" />
-    <meta name="description" content="Amadou Tech - High-End Digital Agency. Premium web development, secure infrastructure, and elite custom software engineering worldwide." />
-    <link rel="alternate" hreflang="x-default" href="https://github.io" />
-    <link rel="alternate" hreflang="en" href="https://github.io" />
-    <link rel="alternate" hreflang="fr" href="https://github.io" />
-
-    <!-- Open Graph pour affichage Prestige sur Réseaux Sociaux -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Amadou Tech | Global High-End Digital Solutions" />
-    <meta property="og:description" content="Premium web development, elite cybersecurity audits, and tailored digital business growth solutions." />
-    <meta property="og:url" content="https://github.io" />
-    <meta property="og:image" content="https://github.iologo.png" />
-    <meta property="og:site_name" content="Amadou Tech" />
-    <meta name="twitter:card" content="summary_large_image" />
-    
-<meta name="google-site-verification" content="GWpKDetqvSZxEWntCqCW-3v-zEKhkzhkrUu1y2Hfclc" />
-
-0
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amadou Tech — ODM | Agence Digitale & Haute Performance</title>
-
+    <title>Amadou Tech - Expert Systeme.io</title>
     <style>
-        /* Optimisations Globales Prestige */
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
-            background-color: #0f172a !important; /* Fond sombre profond moderne */
-            color: #f1f5f9 !important;
+        :root {
+            --bg-dark: #0f172a;
+            --card-dark: #1e293b;
+            --accent-blue: #2563eb;
+            --accent-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
         
-        /* Lissage et effets au survol de TOUS les boutons du site */
-n
-        a, button {
-            transition: all 0.3s ease-in-out !important;
+        /* Section Profil PDG */
+        .profile-section {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
         }
-        a:active, button:active {
-            transform: scale(0.96) !important; /* Effet de clic physique agréable sur mobile */
-            opacity: 0.9 !important;
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-cyan);
+        }
+        .profile-text h2 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+        .profile-text p {
+            color: var(--text-muted);
+            max-width: 600px;
+            font-size: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 2rem;
+            color: var(--text-main);
         }
         
-        /* Correction de la grille des prix et des cartes pour une réactivité parfaite */
-        div[style*="display: flex"] {
-            justify-content: center !important;
-            align-items: stretch !important;
+        /* Grille des réalisations */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
         
-        /* Ajustement des ombres pour un effet relief élégant */
-        div[style*="background-color: #1a202c"], div[style*="background-color: #2d3748"] {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
-            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        @media (min-width: 768px) {
+            .profile-section {
+                flex-direction: row;
+                text-align: left;
+            }
         }
-    
-/* Correctif Amadou Tech */
-div[style*="display: flex"] {
-    flex-wrap: wrap !important;
-}
-
-/* Correctif Finitions Amadou Tech */
-#a-propos, div[style*="display: flex"] {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-}
-.bouton-client, button, a {
-    max-width: 90% !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-}
-
-/* Charte Graphique Élite - Style Stripe */
-body {
-    background-color: #0a2540 !important;
-    background-image: radial-gradient(circle at 50% -20%, #635bff 0%, #0a2540 70%) !important;
-    color: #adbac7 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-}
-h1, h2, h3, h4 {
-    color: #ffffff !important;
-    letter-spacing: -0.025em !important;
-}
-.stripe-card, div[style*="background: #161b22"], div[style*="background: #1e1e1e"], div[style*="background: #222"] {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
-    border-radius: 8px !important;
-}
-
-/* SECTION CONTACT E-MAIL FINALE */
-<section id="contact-email" style="padding: 60px 20px; text-align: center; background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05);">
-    <div style="max-width: 600px; margin: 0 auto;">
-        <h2 style="font-size: 2.2rem; color: #fff; margin-bottom: 15px;">Start Your Project / Nous contacter</h2>
-        <p style="color: #adbac7; margin-bottom: 30px;">Prêt à propulser votre infrastructure ? Écrivez-nous directement par e-mail.</p>
-        <a href="mailto:contact@amadoutech224.github.io" style="display: inline-block; background-color: #635bff; color: #fff; font-weight: 600; padding: 14px 30px; border-radius: 4px; text-decoration: none; box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); transition: all .15s ease;">
-            ✉️ contact@amadoutech224.github.io
-        </a>
-    </div>
-</section>
-
-</style>
-
-
-<script>
-// Protection ODM : Bloquer le clic droit et la copie du site
-document.addEventListener('contextmenu', event => event.preventDefault());
-document.addEventListener('keydown', event => {
-    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'c' || event.key === 'i')) {
-        event.preventDefault();
-    }
-});
-</script>
-
-
-    <!-- Métadonnées de niveau international ODM -->
-    <meta name="description" content="Amadou Tech — ODM. Agence digitale internationale et haute sécurisation web. Forfaits prestigieux de création de contenu et cyber-protection.">
-    <meta name="keywords" content="Amadou Tech, ODM, Cybersécurité Guinée, Agence Digitale, Amadou Diallo, lombre188">
-    <meta name="author" content="Amadou Diallo">
-    
-    <!-- Aperçu Premium pour WhatsApp, Facebook et LinkedIn -->
-    <meta property="og:title" content="Amadou Tech — ODM | Agence Digitale & Haute Sécurité">
-    <meta property="og:description" content="Solution globale de haute performance web, cyber-protection et gestion de communauté par M. Amadou DIALLO.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.io">
-    <meta property="og:image" content="https://unsplash.com">
-    
-    <!-- Favicon Icône de l'onglet -->
-    <link rel="icon" type="image/png" href="https://unsplash.com">
-
-<meta name="google-site-verification" content="4_QtDDwgZy4WZxzxaNMUDIB3_PFZ1IyCJjv9qbeBQ94" />
-  <style>
-    .btn-contact-extra { position: fixed; bottom: 20px; right: 20px; z-index: 2000; background: #3182ce; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; line-height: 60px; font-size: 28px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.4); animation: pulse 2s infinite; }
-    .menu-contact-box { display: none; position: fixed; bottom: 90px; right: 20px; background: #1a202c; border: 1px solid #4a5568; border-radius: 12px; width: 220px; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); overflow: hidden; }
-    .menu-contact-box a { color: white; padding: 14px 16px; text-decoration: none; display: block; font-family: sans-serif; font-size: 15px; border-bottom: 1px solid #2d3748; }
-    .menu-contact-box a:last-child { border-bottom: none; }
-    .menu-contact-box a:hover { background: #2d3748; }
-    .show-contact { display: block !important; }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-  </style>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://google.com">
-  <style>
-    .slider-container-luxe { width: 100%; max-width: 800px; margin: 40px auto; position: relative; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .slider-track { display: flex; transition: transform 0.5s ease-in-out; width: 300%; }
-    .slide-item { width: 33.333%; position: relative; box-sizing: border-box; background: #2d3748; text-align: center; }
-    .slide-item img { width: 100%; height: 350px; object-fit: cover; display: block; }
-    .slide-info { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 30px 20px; color: white; text-align: left; }
-    .slide-info h3 { margin: 0 0 10px 0; color: #63b3ed; font-size: 24px; }
-    .slide-info p { margin: 0; color: #cbd5e0; font-size: 15px; }
-    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 20px; z-index: 10; transition: background 0.3s; }
-    .slider-btn:hover { background: #3182ce; }
-    .slider-prev { left: 15px; }
-    .slider-next { right: 15px; }
-  </style>
+    </style>
 </head>
-<body style="background-color: #0b0f19; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0;">
+<body>
+    <div class="container">
+        <header>
+            <h1>AMADOU TECH</h1>
+            <p class="subtitle">Automatisation & Visibilité sur Internet</p>
+        </header>
 
-    <!-- BARRE DE NAVIGATION -->
-    <header style="background-color: #111827; display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; border-bottom: 1px solid #1f2937; position: sticky; top: 0; z-index: 1000;">
-        <div style="font-weight: 900; color: #38bdf8; font-size: 24px; letter-spacing: -0.5px;">AMADOU TECH</div>
-        <nav>
-            <a href="#accueil" style="color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500;">Accueil</a>
-            <a href="#services" style="color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500;">585 $ / 550 € / 5 000 000 GNF</a>
-            <a href="#tarifs" style="color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500;">Tarifs</a>
-            <a href="#certification" style="color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500;">Certification</a>
-        </nav>
-    </header>
+        <!-- Section Qui suis-je / PDG -->
+        <section class="profile-section">
+            <img src="boss.jpg" alt="Amadou - PDG" class="profile-img">
+            <div class="profile-text">
+                <h2>Qui suis-je ?</h2>
+                <p>Bienvenue ! Je suis le <strong>PDG et fondateur d'Amadou Tech</strong>. Expert certifié Systeme.io, j'accompagne les entreprises et les créateurs de contenu dans l'automatisation de leur business, la création de tunnels de vente à forte conversion et le déploiement de stratégies digitales sur-mesure pour maximiser leur visibilité sur internet.</p>
+            </div>
+        </section>
 
-    <!-- ZONE D'ACCUEIL -->
-    <div id="accueil" style="padding: 100px 20px; background: radial-gradient(circle at top, #1e1b4b 0%, #0b0f19 70%); text-align: center;">
-        
-        <!-- Votre vraie Photo de Profil amadou.jpg -->
-        <div style="margin: 0 auto 25px auto; width: 150px; height: 150px; border-radius: 50%; border: 4px solid #38bdf8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.4); background-color: #1f2937; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="amadou.jpg" alt="Amadou Diallo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: top center;">
-            <span style="color: #94a3b8; font-size: 12px; font-weight: 500; padding: 10px; display: none;">Amadou Diallo</span>
-        </div>
+        <h2 class="section-title">Nos Réalisations</h2>
 
-        <div style="display: inline-block; background-color: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.5px; border: 1px solid rgba(56, 189, 248, 0.2);">
-            🏆 EXPERT CERTIFIÉ SYSTEME.IO
-        </div>
+        <main class="grid">
+            <!-- Projet 1 : E-Commerce -->
+            <div class="card">
+                <img src="projet1.jpg" alt="E-Commerce Platform" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">E-Commerce Corporate Platform</h2>
+                    <p class="card-text">Création et optimisation de structures de boutiques en ligne modernes et de tunnels de vente fluides pour booster vos ventes de produits physiques ou digitaux.</p>
+                </div>
+            </div>
 
-        <h1 style="font-size: 38px; line-height: 1.2; margin: 0 auto 20px auto; font-weight: 800; max-width: 800px; background: linear-gradient(to right, #ffffff, #93c5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            Propulsez Votre Visibilité & Automatisez Vos Ventes Sur Internet
-        </h1>
-        
-        <p style="color: #94a3b8; max-width: 650px; margin: 0 auto 40px auto; font-size: 17px; line-height: 1.6;">
-            Par Amadou Diallo. Création de contenus photo à fort impact, stratégies publicitaires, gestion complète de pages et déploiement d'écosystèmes marketing automatisés.
-        </p>
-        
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-            <a href="https://wa.me" target="_blank" style="text-decoration: none;">
-                <button style="background-color: #25D366; color: white; border: none; padding: 16px 35px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);">
-                    💬 Discuter sur WhatsApp
-                </button>
-            </a>
-            <a href="tel:+224611136553" style="text-decoration: none;">
-                <button style="background-color: #111827; color: #ffffff; border: 1px solid #374151; padding: 16px 35px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer;">
-                    📞 Contact Direct Téléphone
-                </button>
-            </a>
-        </div>
+            <!-- Projet 2 : Fintech -->
+            <div class="card">
+                <img src="projet2.jpg" alt="Fintech Dashboard" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Fintech & Analytics Audit</h2>
+                    <p class="card-text">Intégration de tableaux de bord financiers, de systèmes de paiement automatisés sécurisés et d'outils d'analyse précis pour suivre vos revenus en temps réel.</p>
+                </div>
+            </div>
+
+            <!-- Projet 3 : IA Support -->
+            <div class="card">
+                <img src="projet3.jpg" alt="AI Agent Support" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Custom AI Agent Chatbot</h2>
+                    <p class="card-text">Déploiement d'agents conversationnels intelligents et d'assistants virtuels pour automatiser votre support client et capturer des leads qualifiés 24h/24.</p>
+                </div>
+            </div>
+        </main>
     </div>
-
-    <!-- SECTION DES SERVICES -->
-    <div id="services" style="padding: 60px 20px; text-align: center;">
-        <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 50px;">Mes Domaines d'585 $ / 550 € / 5 000 000 GNF</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1100px; margin: 0 auto;">
-            <div style="background-color: #111827; padding: 40px 30px; border-radius: 16px; width: 290px; text-align: left; border: 1px solid #1f2937;">
-                <div style="font-size: 30px; margin-bottom: 15px;">📸</div>
-                <h3 style="color: #ffffff; font-size: 20px; margin: 0 0 12px 0; font-weight: 700;">Création de Contenu</h3>
-                <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Production de publicités en photo accrocheuses, montages professionnels et conception complète de carrousels graphiques.</p>
-            </div>
-            <div style="background-color: #111827; padding: 40px 30px; border-radius: 16px; width: 290px; text-align: left; border: 1px solid #1f2937;">
-                <div style="font-size: 30px; margin-bottom: 15px;">📊</div>
-                <h3 style="color: #ffffff; font-size: 20px; margin: 0 0 12px 0; font-weight: 700;">Création & Sécurisation de Site Webs</h3>
-                <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Gestion éditoriale et marketing de vos comptes professionnels Facebook, TikTok et Instagram pour booster votre visibilité.</p>
-            </div>
-            <div style="background-color: #111827; padding: 40px 30px; border-radius: 16px; width: 290px; text-align: left; border: 1px solid #1f2937;">
-                <div style="font-size: 30px; margin-bottom: 15px;">📚</div>
-                <h3 style="color: #ffffff; font-size: 20px; margin: 0 0 12px 0; font-weight: 700;">Librairie Mindset</h3>
-                <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Distribution de livres de référence pour bâtir un mental d'investisseur : Père Riche Père Pauvre et stratégies de succès.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION TARIFS -->
-    <div id="tarifs" style="background-color: #111827; padding: 80px 20px; text-align: center; border-top: 1px solid #1f2937;">
-        <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 50px;">Nos Formules & Catalogues</h2>
-    <!-- Section Formules Réparée -->
-    <div style="display: flex; flex-direction: column; gap: 20px; padding: 20px; align-items: center;">
-        
-        <!-- Offre 1 -->
-        <div style="border: 1px solid #3182ce; padding: 20px; border-radius: 10px; width: 100%; max-width: 350px; text-align: center; background-color: #1a202c;">
-            <h3 style="color: #fff; margin-bottom: 10px;">Pack Visuels Publicitaires</h3>
-            <p style="color: #3182ce; font-size: 1.5em; font-weight: bold; margin: 5px 0;">19 € / an</p>
-            <p style="color: #a0aec0; font-size: 0.9em; margin-bottom: 15px;"></p>
-            <p style="color: #cbd5e0; font-size: 0.9em; margin-bottom: 15px;">Création de carrousels et montages photos publicitaires pour réseaux sociaux.</p>
-            <a href="https://wa.me" style="display: inline-block; background-color: #3182ce; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Commander un visuel</a>
-        </div>
-
-        <!-- Offre 2 (Votre forfait principal) -->
-        <div style="border: 2px solid #38a169; padding: 20px; border-radius: 10px; width: 100%; max-width: 350px; text-align: center; background-color: #1a202c; position: relative;">
-            <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background-color: #38a169; color: white; padding: 2px 10px; border-radius: 10px; font-size: 0.8em; font-weight: bold;">Recommandé</span>
-            <h3 style="color: #fff; margin-top: 10px; margin-bottom: 10px;">Création & Sécurisation de Site Web</h3>
-            <p style="color: #38a169; font-size: 1.5em; font-weight: bold; margin: 5px 0;">25 000 € / an</p>
-            <p style="color: #a0aec0; font-size: 0.9em; margin-bottom: 15px;"></p>
-            <p style="color: #cbd5e0; font-size: 0.9em; margin-bottom: 15px;">Conception complète, hébergement sécurisé et audits de code continus contre les failles.</p>
-            <a href="https://wa.me" style="display: inline-block; background-color: #38a169; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Lancer mon forfait</a>
-        </div>
-
-        <!-- Offre 3 -->
-        <div style="border: 1px solid #3182ce; padding: 20px; border-radius: 10px; width: 100%; max-width: 350px; text-align: center; background-color: #1a202c;">
-            <h3 style="color: #fff; margin-bottom: 10px;">Livres & Mindset</h3>
-            <p style="color: #3182ce; font-size: 1.5em; font-weight: bold; margin: 5px 0;">12 € / an</p>
-            <p style="color: #a0aec0; font-size: 0.9em; margin-bottom: 15px;"></p>
-            <p style="color: #cbd5e0; font-size: 0.9em; margin-bottom: 15px;">Sélection des meilleurs ouvrages physiques comme Père Riche Père Pauvre.</p>
-            <a href="https://wa.me" style="display: inline-block; background-color: #3182ce; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Voir la liste</a>
-        </div>
-
-    </div>
-    <br><br><br>Garantie de Compétence Officielle</h2>
-            <p style="color: #38bdf8; font-weight: 700; font-size: 16px; margin-bottom: 30px;">Certification Systeme.io décernée à Amadou Diallo</p>
-            
-            <!-- Affichage du Certificat physique -->
-
-
-<script src="//code.tidio.co/cca5x2a34oqdvd6zscuj9o2mofb013va.js" async></script>
-
-    <!-- Système de Traduction Automatique Amadou Tech -->
-    <div id="google_translate_element" style="position:fixed; top:10px; right:10px; z-index:10000; opacity:0.8;"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: "fr",
-                includedLanguages: "en,fr,es,de,ar",
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: true
-            }, "google_translate_element");
-        }
-    </script>
-    <script type="text/javascript" src="//://google.com"></script>
-    <section id="portfolio" style="padding: 40px 20px; text-align: center; background: transparent;">
-        <h2 style="color: #fff; font-size: 2rem; margin-bottom: 30px;">Nos Réalisations</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1200px; margin: 0 auto;">
-            
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src="projet1.jpg" style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="E-Commerce">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">E-Commerce Corporate Platform</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Advanced e-commerce solution built for global business scaling.</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src="projet2.jpg" style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="Fintech">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">Fintech Security Audit</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Tests de pénétration avancés et sécurisation complète de vos serveurs.</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src="projet3.jpg" style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="AI">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">Custom AI Agent Chatbot</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Intégration d'agents IA intelligents pour automatiser vos tâches et captures de leads 24/7.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="portfolio" style="padding: 40px 20px; text-align: center;">
-        <h2 style="color: #fff; font-size: 2rem; margin-bottom: 30px;">Nos Réalisations</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1200px; margin: 0 auto;">
-            
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src=projet3.jpg" style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="E-Commerce">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">E-Commerce Corporate Platform</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Advanced e-commerce solution built for global business scaling.</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src=projet1.JPG"0 style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="Fintech">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">Fintech Security Audit</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Tests de pénétration avancés et sécurisation complète de vos serveurs.</p>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px; width: 280px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <img src=projet2.jpg" style="width: 100%; height: 160px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; display: block;" alt="AI">
-                <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 10px 0;">Custom AI Agent Chatbot</h3>
-                <p style="color: #adbac7; font-size: 0.85rem; line-height: 1.6; margin: 0;">Intégration d'agents IA intelligents pour automatiser vos tâches et captures de leads 24/7.</p>
-            </div>
-
-        </div>
-    </section>
-
-
-  
-  
-  <!-- SECTION GALERIE ANIMEE DE LUXE -->
-  <section id="portfolio-luxe" style="padding: 60px 20px; background-color: #1a202c; font-family: sans-serif;">
-    <h2 style="text-align: center; color: #3182ce; font-size: 32px; margin-bottom: 10px;">Nos Réalisations Clés</h2>
-    <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Découvrez nos derniers systèmes d'élite déployés à l'international.</p>
-    
-    <div class="slider-container-luxe">
-      <button class="slider-btn slider-prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="slider-btn slider-next" onclick="moveSlide(1)">&#10095;</button>
-      
-      <div class="slider-track" id="sliderTrack">
-        <!-- Projet 1 -->
-        <div class="slide-item">
-          <img src="projet1.jpg" alt="Fintech Security Audit">
-          <div class="slide-info">
-            <h3>Fintech Security Audit</h3>
-            <p>Tests de pénétration avancés et sécurisation complète de vos serveurs bancaires.</p>
-          </div>
-        </div>
-        <!-- Projet 2 -->
-        <div class="slide-item">
-          <img src="projet2.jpg" alt="Custom AI Agent Chatbot">
-          <div class="slide-info">
-            <h3>Custom AI Agent Chatbot</h3>
-            <p>Intégration d'agents IA intelligents pour automatiser vos tâches et captures de leads 24/7.</p>
-          </div>
-        </div>
-        <!-- Projet 3 -->
-        <div class="slide-item">
-          <img src="projet3.jpg" alt="E-Commerce Corporate Platform">
-          <div class="slide-info">
-            <h3>E-Commerce Corporate Platform</h3>
-            <p>Développement de plateformes d'échange internationales ultra-rapides et sécurisées.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    let currentSlide = 0;
-    function moveSlide(direction) {
-      const track = document.getElementById("sliderTrack");
-      currentSlide = (currentSlide + direction + 3) % 3;
-      track.style.transform = "translateX(" + (-currentSlide * 33.333) + "%)";
-    }
-    setInterval(() => moveSlide(1), 5000); // Défilement automatique toutes les 5 secondes
-  </script>
-
-  
-  <!-- SECTION TEMOIGNAGES CLIENTS DE LUXE -->
-  <section id="temoignages" style="padding: 60px 20px; background-color: #2d3748; font-family: sans-serif; color: white;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-      <h2 style="text-align: center; color: #3182ce; font-size: 32px; margin-bottom: 10px;">Avis de nos Clients</h2>
-      <p style="text-align: center; color: #cbd5e0; margin-bottom: 40px;">Ils font confiance à Amadou Tech pour sécuriser et développer leur business.</p>
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-        
-        <!-- AVIS 1 -->
-        <div style="background: #1a202c; padding: 25px; border-radius: 12px; width: 320px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); box-sizing: border-box;">
-          <div style="color: #ecc94b; margin-bottom: 10px; font-size: 18px;">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">"L'audit de sécurité d'Amadou Tech a permis de bloquer toutes les attaques sur notre application financière. Une expertise rare et indispensable."</p>
-          <div style="font-weight: bold; color: #63b3ed; font-size: 15px;">Mamadou Diallo</div>
-          <div style="color: #a0aec0; font-size: 12px;">Directeur CTO, Fintech Conakry</div>
-        </div>
-
-        <!-- AVIS 2 -->
-        <div style="background: #1a202c; padding: 25px; border-radius: 12px; width: 320px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); box-sizing: border-box;">
-          <div style="color: #ecc94b; margin-bottom: 10px; font-size: 18px;">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">"Le chatbot IA développé sur notre site répond à nos clients 24h/24. Nos ventes ont augmenté de 35% en seulement un mois. Merci !"</p>
-          <div style="font-weight: bold; color: #63b3ed; font-size: 15px;">John Smith</div>
-          <div style="color: #a0aec0; font-size: 12px;">CEO, E-Commerce Global (New York)</div>
-        </div>
-
-        <!-- AVIS 3 -->
-        <div style="background: #1a202c; padding: 25px; border-radius: 12px; width: 320px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); box-sizing: border-box;">
-          <div style="color: #ecc94b; margin-bottom: 10px; font-size: 18px;">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">"Une équipe très professionnelle, réactive et à l'écoute sur Termux. Le site vitrine est d'une rapidité incroyable et parfaitement sécurisé."</p>
-          <div style="font-weight: bold; color: #63b3ed; font-size: 15px;">Sarah Martin</div>
-          <div style="color: #a0aec0; font-size: 12px;">Fondatrice, Agence Innova (Paris)</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION TARIFS AMADOU TECH -->
-
-  <!-- SYSTEME DE CONVERSION DE DEVISES MONDIAL -->
-  <div style="text-align: center; margin: 20px auto; max-width: 400px; background: #2d3748; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-family: sans-serif; color: white;">
-    <label for="currency-select" style="margin-right: 10px; font-weight: bold; font-size: 14px;">Convertir les tarifs en :</label>
-    <select id="currency-select" onchange="convertSitePrices()" style="padding: 8px; border-radius: 4px; background: #1a202c; color: white; border: 1px solid #4a5568;">
-      <option value="GNF">GNF (Franc Guinéen)</option>
-      <option value="USD">USD (Dollar Américain)</option>
-      <option value="EUR">EUR (Euro)</option>
-      <option value="XOF">XOF (Franc CFA)</option>
-    </select>
-  </div>
-
-  <script>
-    const originalPrices = { vitrine: 1500000, ia: 3500000, securite: 5000000 };
-    const rates = { GNF: 1, USD: 0.00012, EUR: 0.00011, XOF: 0.071 };
-    const symbols = { GNF: "GNF", USD: "$", EUR: "€", XOF: "CFA" };
-
-    function convertSitePrices() {
-      const selected = document.getElementById("currency-select").value;
-      const rate = rates[selected];
-      const symbol = symbols[selected];
-
-      // Mise à jour des cartes de tarifs sur la page
-      document.body.innerHTML = document.body.innerHTML
-        .replace(/[\d\s]+ GNF|[\d\s\.,]+\s?[\$€CFA]/g, function(match) {
-          if (match.includes("Vitrine") || document.activeElement.id === "currency-select") return match;
-          return match; 
-        });
-      
-      alert("Conversion activée en " + selected + " (Mise à jour des taux mondiaux)");
-    }
-  </script>
-
-  <section id="tarifs" style="padding: 60px 20px; background-color: #1a202c; font-family: sans-serif; color: white;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-      <h2 style="text-align: center; margin-bottom: 10px; font-size: 32px; color: #3182ce;">Nos Forfaits & Tarifs</h2>
-      <p style="text-align: center; color: #a0aec0; margin-bottom: 40px;">Des solutions adaptées à la taille de votre entreprise et à votre budget.</p>
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-        
-        <!-- FORFAIT STARTER -->
-        <div style="background: #2d3748; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-align: center; box-sizing: border-box;">
-          <h3 style="color: #63b3ed; font-size: 22px; margin-bottom: 10px;">Forfait Vitrine</h3>
-          <div style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">175 $ / 165 € / 1 500 000 GNF</div>
-          <p style="color: #cbd5e0; font-size: 14px; margin-bottom: 20px; min-height: 60px;">Idéal pour les PME et professionnels qui veulent lancer leur premier site internet en ligne.</p>
-          <ul style="text-align: left; padding-left: 20px; font-size: 14px; color: #a0aec0; margin-bottom: 30px; line-height: 2;">
-            <li>Site Web Responsive</li>
-            <li>Formulaire de Contact</li>
-            <li>Optimisation Google</li>
-            <li>Hébergement inclus</li>
-          </ul>
-          <a href="#contact-form-section" style="display: block; background: #3182ce; color: white; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 14px;">Choisir ce forfait</a>
-        </div>
-
-        <!-- FORFAIT PRO -->
-        <div style="background: #2d3748; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3); text-align: center; border: 2px solid #3182ce; box-sizing: border-box; transform: scale(1.03);">
-          <div style="background: #3182ce; color: white; font-size: 11px; font-weight: bold; text-transform: uppercase; padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 10px;">Le Plus Populaire</div>
-          <h3 style="color: #63b3ed; font-size: 22px; margin-bottom: 10px;">Forfait IA & App</h3>
-          <div style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">410 $ / 385 € / 3 500 000 GNF</div>
-          <p style="color: #cbd5e0; font-size: 14px; margin-bottom: 20px; min-height: 60px;">Parfait pour automatiser votre business avec des Chatbots IA et applications sur mesure.</p>
-          <ul style="text-align: left; padding-left: 20px; font-size: 14px; color: #a0aec0; margin-bottom: 30px; line-height: 2;">
-            <li>Tout le forfait Vitrine</li>
-            <li>Chatbot IA intelligent</li>
-            <li>Base de données sécurisée</li>
-            <li>Support technique 7j/7</li>
-          </ul>
-          <a href="#contact-form-section" style="display: block; background: #3182ce; color: white; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 14px;">Choisir ce forfait</a>
-        </div>
-
-        <!-- FORFAIT EXPERT -->
-        <div style="background: #2d3748; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-align: center; box-sizing: border-box;">
-          <h3 style="color: #63b3ed; font-size: 22px; margin-bottom: 10px;">Forfait Sécurité</h3>
-          <div style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">585 $ / 550 € / 5 000 000 GNF</div>
-          <p style="color: #cbd5e0; font-size: 14px; margin-bottom: 20px; min-height: 60px;">Destiné aux entreprises exigeantes nécessitant des audits de sécurité complexes.</p>
-          <ul style="text-align: left; padding-left: 20px; font-size: 14px; color: #a0aec0; margin-bottom: 30px; line-height: 2;">
-            <li>Tests d'intrusion (Pentest)</li>
-            <li>Correction des failles</li>
-            <li>Chiffrement des données</li>
-            <li>Rapport d'audit complet</li>
-          </ul>
-          <a href="#contact-form-section" style="display: block; background: #3182ce; color: white; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 14px;">Choisir ce forfait</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION FORMULAIRE DE CONTACT AMADOU TECH -->
-  <section id="contact-form-section" style="padding: 60px 20px; background-color: #1a202c; font-family: sans-serif; color: white;">
-    <div style="max-width: 600px; margin: 0 auto; background: #2d3748; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-      <h2 style="text-align: center; margin-bottom: 10px; font-size: 28px; color: #3182ce;">Contactez-nous</h2>
-      <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Discutez de votre projet de développement ou de cybersécurité avec nos experts.</p>
-      
-      <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-        <div>
-          <label style="display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px;">Nom complet</label>
-          <input type="text" name="name" required placeholder="Ex: Amadou Diallo" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #4a5568; background: #1a202c; color: white; box-sizing: border-box;">
-        </div>
-        
-        <div>
-          <label style="display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px;">Adresse E-mail</label>
-          <input type="email" name="_replyto" required placeholder="Ex: client@gmail.com" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #4a5568; background: #1a202c; color: white; box-sizing: border-box;">
-        </div>
-        
-        <div>
-          <label style="display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px;">Votre Message</label>
-          <textarea name="message" rows="5" required placeholder="Décrivez votre projet en quelques lignes..." style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #4a5568; background: #1a202c; color: white; box-sizing: border-box; resize: vertical;"></textarea>
-        </div>
-        
-        <button type="submit" style="background: #3182ce; color: white; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; margin-top: 10px;">Envoyer le message</button>
-      </form>
-    </div>
-  </section>
-
 </body>
 </html>
+
+0
