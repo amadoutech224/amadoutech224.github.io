@@ -137,6 +137,267 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 40px;
         }
+        .pricing-section {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .pricing-title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+        }
+        .pricing-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .price-card {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #23264d;
+            text-align: center;
+        }
+        .price-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .price-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-cyan);
+            margin-bottom: 15px;
+        }
+        .converter-box {
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #23264d;
+            max-width: 400px;
+            margin: 40px auto 0 auto;
+        }
+        .converter-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+        .converter-box select {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            border: 1px solid #334155;
+            padding: 10px 15px;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">585 $ / 550 € / 5 000 000 GNF</div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">AMADOU<br>TECH</div>
+            <div class="nav-links">
+                <div>Accueil</div>
+                <div>Tarifs</div>
+                <div>Expertise</div>
+                <div>Certification</div>
+            </div>
+        </nav>
+        <div class="certif-container">
+            <div class="certif-circle">
+                <div class="s-logo">s</div>
+                <div class="certif-title">Certificat de réussite</div>
+                <div class="certif-feli">Félicitations à :</div>
+                <div class="certif-name">Amadou diallo</div>
+                <div class="certif-desc">Pour avoir terminé la certification systeme.io</div>
+                <div class="certif-footer">
+                    <div>Aurélien Amacker<br><span style="color:#888;">Fondateur</span></div>
+                    <div style="color:#ffcc00; font-size:1rem;">🏆</div>
+                    <div style="color:#00aaff; font-weight:bold;">systeme.io</div>
+                </div>
+            </div>
+            <div class="badge-text">🏆 EXPERT CERTIFIÉ SYSTEME.IO</div>
+        </div>
+        <h2 class="hero-title">Propulsez Votre Visibilité & Automatisez Vos Ventes Sur Internet</h2>
+        <section class="pricing-section">
+            <h3 class="pricing-title">Nos Offres & Tarifs</h3>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-name">Pack Visibilité Standard</div>
+                    <div class="price-amount" id="price-standard">5 000 000 GNF</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Mise en place de votre premier tunnel de vente optimisé sous Systeme.io.</p>
+                </div>
+            </div>
+        </section>
+        <div class="converter-box">
+            <label>Convertir les tarifs en :</label>
+            <select id="currency-select" onchange="convertPrice()">
+                <option value="GNF">GNF (Franc Guinéen)</option>
+                <option value="USD">USD (Dollar - 585 $)</option>
+                <option value="EUR">EUR (Euro - 550 €)</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        function convertPrice() {
+            var select = document.getElementById("currency-select");
+            var priceLabel = document.getElementById("price-standard");
+            if (select.value === "GNF") {
+                priceLabel.innerText = "5 000 000 GNF";
+            } else if (select.value === "USD") {
+                priceLabel.innerText = "585 $";
+            } else if (select.value === "EUR") {
+                priceLabel.innerText = "550 €";
+            }
+        }
+    </script>
+</body>
+</html>
+
+0<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amadou Tech - Expert Certifié Systeme.io</title>
+    <style>
+        :root {
+            --bg-dark: #0f1123;
+            --card-dark: #171932;
+            --accent-blue: #0088ff;
+            --accent-cyan: #00ccff;
+            --text-main: #ffffff;
+            --text-muted: #8fa0dd;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.4;
+            padding: 15px;
+        }
+        .top-bar {
+            background-color: #4b46ef;
+            color: #ffffff;
+            font-size: 0.8rem;
+            padding: 5px;
+            text-align: left;
+            margin: -15px -15px 15px -15px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            line-height: 1.1;
+        }
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: left;
+        }
+        .certif-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .certif-circle {
+            width: 220px;
+            height: 220px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 25px auto;
+            border: 4px solid var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            color: #000000;
+        }
+        .s-logo {
+            color: #00aaff;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 2px;
+        }
+        .certif-title {
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .certif-feli {
+            font-size: 0.5rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .certif-name {
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+            width: 80%;
+        }
+        .certif-desc {
+            font-size: 0.45rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .certif-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            font-size: 0.35rem;
+        }
+        .badge-text {
+            background: linear-gradient(to right, #e28743, #eeaf61);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .hero-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to bottom, #ffffff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+        }
         
         /* Grille des tarifs d'origine */
         .pricing-section {
